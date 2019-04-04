@@ -13,7 +13,7 @@ class Layer
   include ArgumentChecker
 
   def initialize(size = 0)
-    check_argument('size', Integer, size)
+    check_argument(name: 'size', expected_class: Integer, value: size)
     raise ArgumentError, '`size` should be greater than 0' unless size.positive?
 
     @neurons = []

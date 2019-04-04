@@ -38,11 +38,12 @@ class NetworkSettings
   private
 
   def check_integer_argument(attribute_name, value)
-    check_argument(attribute_name, Integer, value)
+    check_argument(name: attribute_name, expected_class: Integer, value: value)
   end
 
   def check_positive_value(attribute_name, value)
     return if value.positive?
+
     raise ArgumentError, "`#{attribute_name}` must be greater than 0"
   end
 end

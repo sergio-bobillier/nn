@@ -7,7 +7,7 @@ class DigitRecognizer < NeuralNetwork
   include ArgumentChecker
 
   def initialize(input_layer_size)
-    check_argument('input_layer_size', Integer, input_layer_size)
+    check_argument(name: 'input_layer_size', expected_class: Integer, value: input_layer_size)
 
     network_settings = NetworkSettings.new.tap do |settings|
       settings.input_layer_size = input_layer_size

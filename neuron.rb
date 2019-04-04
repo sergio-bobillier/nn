@@ -24,7 +24,7 @@ class Neuron
   end
 
   def value=(value)
-    check_argument('value', Float, value)
+    check_argument(name: 'value', expected_class: Float, value: value)
     @value = value
   end
 

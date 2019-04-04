@@ -12,7 +12,7 @@ class NeuralNetwork
   attr_reader :output_layer
 
   def initialize(network_settings)
-    check_argument('network_settings', NetworkSettings, network_settings)
+    check_argument(name: 'network_settings', expected_class: NetworkSettings, value: network_settings)
 
     @input_layer = Layer.new(network_settings.input_layer_size)
 
@@ -39,7 +39,7 @@ class NeuralNetwork
   end
 
   def feed(data)
-    check_argument('data', Array, data)
+    check_argument(name: 'data', expected_class: Array, value: data)
 
     data.each_with_index do |datum, index|
       @input_layer[index].value = datum

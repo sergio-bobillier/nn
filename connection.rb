@@ -37,7 +37,7 @@ class Connection
     @target = target
   end
 
-  def check_neuron_argument(neuron, argument_name)
-    check_argument(argument_name, Neuron, neuron)
+  def check_neuron_argument(neuron, name)
+    check_argument(name: name, expected_class: Neuron, value: neuron)
   end
 end
