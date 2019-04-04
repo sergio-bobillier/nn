@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'digit_recognizer'
+require_relative 'digit_recognizer/digit_recognizer'
 
 dr = DigitRecognizer.new(784)
 

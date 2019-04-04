@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'neural_network'
+require_relative '../neural_network'
 
 # A multi-layer perceptron to recognize hand-written digits
 class DigitRecognizer < NeuralNetwork
