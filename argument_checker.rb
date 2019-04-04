@@ -2,7 +2,8 @@
 
 # reek.
 module ArgumentChecker
-  def check_argument(name:, expected_class:, value:)
+  def check_argument(name:, expected_class:, value:, allow_nil: false)
+    return if allow_nil && value.nil?
     return if value.is_a?(expected_class)
 
     raise_argument_error(name, expected_class, value.class)
